@@ -1,0 +1,3291 @@
+/*
+=====================================================
+
+Volcanic Vein Lava THEME
+
+PART 1A
+
+Foundation System
+
+- Design Tokens
+- Dark Obsidian Material
+- Light Polished Obsidian Material
+- Lava Vein Palette
+- Core Obsidian Variables
+
+=====================================================
+*/
+
+
+/*=====================================================
+01 DESIGN TOKENS
+=====================================================*/
+
+:root {
+
+    /* Typography */
+
+    --ov-font-body:
+        "Inter",
+        "Noto Sans",
+        sans-serif;
+
+    --ov-font-heading:
+        "Cormorant Garamond",
+        "Libre Baskerville",
+        serif;
+
+    --ov-font-code:
+        "JetBrains Mono",
+        monospace;
+
+
+
+    /* Radius */
+
+    --ov-radius-sm: 8px;
+
+    --ov-radius-md: 14px;
+
+    --ov-radius-lg: 22px;
+
+
+
+    /* Motion */
+
+    --ov-transition:
+        .25s ease;
+
+
+
+    /* Reading */
+
+    --ov-reading-width:
+        1200px;
+
+}
+
+
+
+/*=====================================================
+02 DARK MODE
+
+Ancient volcanic chamber
+
+Black obsidian
+Molten veins
+Deep atmosphere
+
+=====================================================
+*/
+
+
+.theme-dark {
+
+
+    /* Stone surfaces */
+
+
+    --ov-bg:
+
+        #080808;
+
+
+    --ov-bg-secondary:
+
+        #101010;
+
+
+    --ov-bg-panel:
+
+        #141414;
+
+
+    --ov-bg-elevated:
+
+        #191919;
+
+
+
+    /* Glass */
+
+
+    --ov-glass:
+
+        rgba(255,255,255,.035);
+
+
+    --ov-glass-hover:
+
+        rgba(255,255,255,.06);
+
+
+
+    /* Borders */
+
+
+    --ov-border:
+
+        rgba(255,255,255,.10);
+
+
+    --ov-border-light:
+
+        rgba(255,255,255,.16);
+
+
+
+    /* Text */
+
+
+    --ov-text:
+
+        #d2d0cb;
+
+
+    --ov-text-bright:
+
+        #f3eee6;
+
+
+    --ov-text-muted:
+
+        #89847d;
+
+
+
+    /* Lava system */
+
+
+    --ov-lava-core:
+
+        #d85b2a;
+
+
+    --ov-lava-copper:
+
+        #e58b42;
+
+
+    --ov-lava-hot:
+
+        #ffc477;
+
+
+
+    --ov-lava-glow:
+
+        rgba(216,91,42,.16);
+
+
+
+    /* Status */
+
+
+    --ov-success:
+
+        #8acb72;
+
+
+    --ov-warning:
+
+        #e8b65a;
+
+
+    --ov-danger:
+
+        #e46b62;
+
+
+}
+
+
+
+/*=====================================================
+03 LIGHT MODE
+
+Polished obsidian under daylight
+
+Warm mineral stone
+Copper reflection
+
+=====================================================
+*/
+
+
+.theme-light {
+
+
+
+    /* Stone surfaces */
+
+
+    --ov-bg:
+
+        #bdb8ad;
+
+
+    --ov-bg-secondary:
+
+        #cbc5b8;
+
+
+    --ov-bg-panel:
+
+        #d6d0c4;
+
+
+    --ov-bg-elevated:
+
+        #afa99d;
+
+
+
+    /* Glass */
+
+
+    --ov-glass:
+
+        rgba(255,255,255,.18);
+
+
+    --ov-glass-hover:
+
+        rgba(255,255,255,.32);
+
+
+
+    /* Borders */
+
+
+    --ov-border:
+
+        rgba(70,60,45,.18);
+
+
+    --ov-border-light:
+
+        rgba(70,60,45,.28);
+
+
+
+    /* Text */
+
+
+    --ov-text:
+
+        #302d29;
+
+
+    --ov-text-bright:
+
+        #171512;
+
+
+    --ov-text-muted:
+
+        #696257;
+
+
+
+    /* Lava / copper */
+
+
+    --ov-lava-core:
+
+        #b94720;
+
+
+    --ov-lava-copper:
+
+        #d47732;
+
+
+    --ov-lava-hot:
+
+        #f0ad63;
+
+
+
+    --ov-lava-glow:
+
+        rgba(185,71,32,.14);
+
+
+
+    /* Status */
+
+
+    --ov-success:
+
+        #527d43;
+
+
+    --ov-warning:
+
+        #a97825;
+
+
+    --ov-danger:
+
+        #b34b43;
+
+
+}
+
+
+
+/*=====================================================
+04 OBSIDIAN COMPATIBILITY VARIABLES
+
+Connect theme with Obsidian engine
+
+=====================================================
+*/
+
+
+.theme-dark,
+.theme-light {
+
+
+    --background-primary:
+
+        var(--ov-bg);
+
+
+
+    --background-secondary:
+
+        var(--ov-bg-secondary);
+
+
+
+    --background-primary-alt:
+
+        var(--ov-bg-panel);
+
+
+
+    --background-secondary-alt:
+
+        var(--ov-bg-elevated);
+
+
+
+    --background-modifier-border:
+
+        var(--ov-border);
+
+
+
+    --background-modifier-border-hover:
+
+        var(--ov-border-light);
+
+
+
+    --text-normal:
+
+        var(--ov-text);
+
+
+
+    --text-muted:
+
+        var(--ov-text-muted);
+
+
+
+    --text-accent:
+
+        var(--ov-lava-core);
+
+
+
+    --interactive-accent:
+
+        var(--ov-lava-core);
+
+
+
+    --interactive-accent-hover:
+
+        var(--ov-lava-copper);
+
+
+
+    --text-highlight-bg:
+
+        rgba(212,119,50,.25);
+
+
+
+}
+/*
+=====================================================
+
+Volcanic Vein Lava THEME
+
+PART 1B
+
+- Workspace
+- Leaves
+- Ambient Lighting
+- Tabs
+- Ribbon
+- Status Bar
+- Scrollbars
+
+=====================================================
+*/
+
+
+/*=====================================================
+01 BODY FOUNDATION
+
+Volcanic atmosphere
+
+=====================================================
+*/
+
+
+body {
+
+    background:
+
+        var(--ov-bg);
+
+
+    color:
+
+        var(--ov-text);
+
+
+    font-family:
+
+        var(--ov-font-body);
+
+}
+
+
+
+
+
+/*=====================================================
+02 WORKSPACE
+
+Main obsidian chamber
+
+=====================================================
+*/
+
+
+.workspace {
+
+
+    background:
+
+        var(--ov-bg);
+
+
+    color:
+
+        var(--ov-text);
+
+
+    position:
+
+        relative;
+
+
+}
+
+
+
+
+
+.workspace-leaf {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+    border-color:
+
+        var(--ov-border);
+
+
+}
+
+
+
+
+
+.workspace-leaf-content {
+
+
+    background:
+
+        transparent;
+
+
+}
+
+
+
+
+
+/*=====================================================
+03 AMBIENT LAVA LIGHT
+
+Subtle atmosphere only
+
+=====================================================
+*/
+
+
+.workspace::before {
+
+
+    content:
+
+        "";
+
+
+    position:
+
+        absolute;
+
+
+    inset:
+
+        0;
+
+
+    pointer-events:
+
+        none;
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle at top left,
+
+            var(--ov-lava-glow),
+
+            transparent 35%
+
+        );
+
+
+    opacity:
+
+        .10;
+
+
+}
+
+
+
+
+
+.theme-light .workspace::before {
+
+
+    opacity:
+
+        .05;
+
+
+}
+
+
+
+
+
+.workspace::after {
+
+
+    content:
+
+        "";
+
+
+    position:
+
+        absolute;
+
+
+    inset:
+
+        0;
+
+
+    pointer-events:
+
+        none;
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle at bottom right,
+
+            var(--ov-lava-glow),
+
+            transparent 40%
+
+        );
+
+
+    opacity:
+
+        .06;
+
+
+}
+
+
+
+
+
+/*=====================================================
+04 TABS
+
+Polished obsidian tabs
+
+=====================================================
+*/
+
+
+.workspace-tab-header {
+
+
+    color:
+
+        var(--ov-text-muted);
+
+
+    transition:
+
+        var(--ov-transition);
+
+
+}
+
+
+
+
+
+.workspace-tab-header:hover {
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+.workspace-tab-header.is-active {
+
+
+    color:
+
+        var(--ov-text-bright);
+
+
+
+    border-bottom:
+
+
+        2px solid
+
+        var(--ov-lava-core);
+
+
+
+    box-shadow:
+
+
+        0 4px 18px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+.workspace-tab-header-container {
+
+
+    background:
+
+        var(--ov-bg-secondary);
+
+
+}
+
+
+
+
+
+/*=====================================================
+05 SIDE DOCK / RIBBON
+
+Stone archive walls
+
+=====================================================
+*/
+
+
+.workspace-ribbon {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border-right:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+}
+
+
+
+
+
+.side-dock-ribbon-action {
+
+
+    color:
+
+        var(--ov-text-muted);
+
+
+}
+
+
+
+
+
+.side-dock-ribbon-action:hover {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+
+    filter:
+
+
+        drop-shadow(
+
+            0 0 8px
+
+            var(--ov-lava-glow)
+
+        );
+
+
+}
+
+
+
+
+
+/*=====================================================
+06 STATUS BAR
+
+Bottom forge edge
+
+=====================================================
+*/
+
+
+.status-bar {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border-top:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    color:
+
+        var(--ov-text-muted);
+
+
+}
+
+
+
+
+
+.status-bar-item:hover {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+/*=====================================================
+07 SCROLLBAR
+
+Mineral edge
+
+=====================================================
+*/
+
+
+*::-webkit-scrollbar {
+
+    width:
+        10px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:
+        var(--ov-bg);
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        var(--ov-border-light);
+
+    border-radius:
+        20px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--ov-lava-core);
+
+}
+
+
+
+
+
+::-webkit-scrollbar {
+
+
+    width:
+
+        10px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-track {
+
+
+    background:
+
+        var(--ov-bg);
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+    background:
+
+        var(--ov-border-light);
+
+
+    border-radius:
+
+        20px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb:hover {
+
+
+    background:
+
+        var(--ov-lava-core);
+
+
+}
+/*
+=====================================================
+
+Volcanic Vein Lava THEME
+
+PART 2
+
+- Editor Foundation
+- Reading Width
+- Typography
+- Headings
+- Links
+- Lists
+- Code
+- Tables
+
+=====================================================
+*/
+
+
+/*=====================================================
+01 EDITOR FOUNDATION
+
+Writing chamber
+
+=====================================================
+*/
+
+
+.markdown-preview-view,
+.markdown-source-view {
+
+
+    font-family:
+
+        var(--ov-font-body);
+
+
+    font-size:
+
+        17px;
+
+
+    line-height:
+
+        1.75;
+
+
+    letter-spacing:
+
+        .01em;
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+/*=====================================================
+02 READING WIDTH
+
+Responsive archive space
+
+=====================================================
+*/
+
+
+.markdown-preview-view .markdown-preview-sizer {
+
+
+    max-width:
+
+        var(--ov-reading-width);
+
+
+
+    width:
+
+        100%;
+
+
+
+    margin:
+
+        0 auto;
+
+
+}
+
+
+
+
+
+.markdown-source-view .cm-scroller {
+
+
+    padding-left:
+
+        40px;
+
+
+
+    padding-right:
+
+        40px;
+
+
+}
+
+
+
+
+
+/*=====================================================
+03 LIVE PREVIEW
+
+=====================================================
+*/
+
+
+.cm-editor {
+
+
+    font-family:
+
+        var(--ov-font-body);
+
+
+
+    font-size:
+
+        17px;
+
+
+
+    line-height:
+
+        1.75;
+
+
+}
+
+
+
+
+
+.cm-activeLine {
+
+
+    background:
+
+
+        rgba(216,91,42,.045);
+
+
+}
+
+
+
+
+
+.cm-cursor {
+
+
+    border-left-color:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+.cm-selectionBackground {
+
+
+    background:
+
+
+        rgba(216,91,42,.20);
+
+
+}
+
+
+
+
+
+/*=====================================================
+04 HEADINGS
+
+Carved stone titles
+
+=====================================================
+*/
+
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+
+
+    font-family:
+
+        var(--ov-font-heading);
+
+
+
+    color:
+
+        var(--ov-text-bright);
+
+
+}
+
+
+
+
+
+.markdown-preview-view h1 {
+
+
+    font-size:
+
+        2.5em;
+
+
+
+    border-bottom:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    padding-bottom:
+
+        15px;
+
+
+
+    text-shadow:
+
+
+        0 0 15px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+.markdown-preview-view h2 {
+
+
+    font-size:
+
+        2em;
+
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+.markdown-preview-view h3 {
+
+
+    font-size:
+
+        1.5em;
+
+
+
+    color:
+
+        var(--ov-lava-copper);
+
+
+}
+
+
+
+
+
+/*=====================================================
+05 PARAGRAPHS
+
+=====================================================
+*/
+
+
+.markdown-preview-view p {
+
+
+    margin-bottom:
+
+        1.2em;
+
+
+}
+
+
+
+
+
+/*=====================================================
+06 LINKS
+
+Lava veins
+
+=====================================================
+*/
+
+
+.markdown-preview-view a,
+.internal-link {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+
+    text-decoration:
+
+        none;
+
+
+
+    transition:
+
+        var(--ov-transition);
+
+
+}
+
+
+
+
+
+.markdown-preview-view a:hover,
+.internal-link:hover {
+
+
+    color:
+
+        var(--ov-lava-copper);
+
+
+
+    text-shadow:
+
+
+        0 0 10px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+07 LISTS
+
+=====================================================
+*/
+
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+
+
+    padding-left:
+
+        30px;
+
+
+}
+
+
+
+
+
+.markdown-preview-view li {
+
+
+    margin-bottom:
+
+        8px;
+
+
+}
+
+
+
+
+
+.markdown-preview-view li::marker {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+/*=====================================================
+08 INLINE CODE
+
+Mineral fragments
+
+=====================================================
+*/
+
+
+code {
+
+
+    font-family:
+
+        var(--ov-font-code);
+
+
+
+    background:
+
+        var(--ov-bg-elevated);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    color:
+
+        var(--ov-lava-copper);
+
+
+
+    padding:
+
+        3px 7px;
+
+
+
+    border-radius:
+
+        6px;
+
+
+}
+
+
+
+
+
+/*=====================================================
+09 CODE BLOCKS
+
+Obsidian terminal
+
+=====================================================
+*/
+
+
+pre {
+
+
+    background:
+
+        #050505;
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    padding:
+
+        20px;
+
+
+
+    box-shadow:
+
+
+        inset 0 0 30px
+
+        rgba(216,91,42,.08);
+
+
+}
+
+
+
+
+
+pre code {
+
+
+    background:
+
+        transparent;
+
+
+
+    border:
+
+        none;
+
+
+}
+
+
+
+
+
+/*=====================================================
+10 TABLE SYSTEM
+
+Obsidian archive slab
+
+Dark + Light compatible
+
+=====================================================
+*/
+
+
+/* Whole table */
+
+.markdown-preview-view table,
+.markdown-rendered table,
+.table-view-table {
+
+
+    background:
+
+        var(--ov-bg-panel) ;
+
+
+    border-collapse:
+
+        collapse;
+
+
+}
+
+
+
+
+
+/* Header */
+
+.markdown-preview-view thead,
+.markdown-rendered thead,
+.table-view-table thead {
+
+
+    background:
+
+        var(--ov-bg-elevated) ;
+
+
+}
+
+
+
+
+
+.markdown-preview-view th,
+.markdown-rendered th,
+.table-view-table th {
+
+
+    background:
+
+        var(--ov-bg-elevated) ;
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+/* Body all same colour */
+
+.markdown-preview-view tbody,
+.markdown-rendered tbody,
+.table-view-table tbody {
+
+
+    background:
+
+        var(--ov-bg-panel) ;
+
+
+}
+
+
+
+
+
+.markdown-preview-view tbody tr,
+.markdown-rendered tbody tr,
+.table-view-table tbody tr {
+
+
+    background:
+
+        var(--ov-bg-panel) ;
+
+
+}
+
+
+
+
+
+/* Remove zebra striping */
+
+.markdown-preview-view tbody tr:nth-child(even),
+.markdown-preview-view tbody tr:nth-child(odd),
+.markdown-rendered tbody tr:nth-child(even),
+.markdown-rendered tbody tr:nth-child(odd),
+.table-view-table tbody tr:nth-child(even),
+.table-view-table tbody tr:nth-child(odd) {
+
+
+    background:
+
+        var(--ov-bg-panel) ;
+
+
+}
+
+
+
+
+
+/* Cells */
+
+.markdown-preview-view td,
+.markdown-rendered td,
+.table-view-table td {
+
+
+    background:
+
+        var(--ov-bg-panel) ;
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+/* Hover */
+
+.markdown-preview-view tbody tr:hover,
+.markdown-rendered tbody tr:hover,
+.table-view-table tbody tr:hover {
+
+
+    background:
+
+        rgba(216,91,42,.05) ;
+
+
+}
+
+
+
+
+
+.markdown-preview-view tbody tr:hover td,
+.markdown-rendered tbody tr:hover td,
+.table-view-table tbody tr:hover td {
+
+
+    background:
+
+        rgba(216,91,42,.05) ;
+
+
+}
+/*
+=====================================================
+
+Volcanic Vein Lava THEME
+
+PART 3
+
+- Callouts
+- Tags
+- File Explorer
+- Properties
+- Glass System
+- Search
+- Buttons
+
+=====================================================
+*/
+
+
+/*=====================================================
+01 CALLOUT SYSTEM
+
+Mineral chambers
+
+=====================================================
+*/
+
+
+.callout {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    box-shadow:
+
+
+        0 12px 30px
+
+        rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+
+.callout-title {
+
+
+    color:
+
+        var(--ov-text-bright);
+
+
+
+    font-weight:
+
+        700;
+
+
+}
+
+
+
+
+
+.callout-content {
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+/* Lava callout */
+
+
+.callout[data-callout="lava"] {
+
+
+    background:
+
+
+        rgba(216,91,42,.10);
+
+
+
+    border-color:
+
+
+        rgba(216,91,42,.35);
+
+
+
+    box-shadow:
+
+
+        0 0 25px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/* Artifact */
+
+
+.callout[data-callout="artifact"] {
+
+
+    background:
+
+
+        rgba(229,139,66,.10);
+
+
+
+    border-color:
+
+
+        var(--ov-lava-copper);
+
+
+}
+
+
+
+
+
+/* Forge */
+
+
+.callout[data-callout="forge"] {
+
+
+    background:
+
+
+        rgba(216,91,42,.07);
+
+
+
+}
+
+
+
+
+
+/* Warning */
+
+
+.callout[data-callout="warning"] {
+
+
+    border-color:
+
+
+        var(--ov-warning);
+
+
+}
+
+
+
+
+
+/*=====================================================
+02 TAG SYSTEM
+
+Copper mineral labels
+
+=====================================================
+*/
+
+
+.tag {
+
+
+    background:
+
+        rgba(216,91,42,.08);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-lava-core);
+
+
+
+    border-radius:
+
+        20px;
+
+
+
+    padding:
+
+        4px 12px;
+
+
+
+    color:
+
+        var(--ov-text);
+
+
+
+    transition:
+
+        var(--ov-transition);
+
+
+}
+
+
+
+
+
+.tag:hover {
+
+
+    background:
+
+        var(--ov-lava-core);
+
+
+
+    color:
+
+        white;
+
+
+
+    box-shadow:
+
+
+        0 0 18px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+03 FILE EXPLORER
+
+Stone archive
+
+=====================================================
+*/
+
+
+.nav-folder-title,
+.nav-file-title {
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+.nav-folder-title:hover,
+.nav-file-title:hover {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+
+    background:
+
+
+        rgba(216,91,42,.05);
+
+
+}
+
+
+
+
+
+.nav-file-title.is-active {
+
+
+    background:
+
+
+        rgba(216,91,42,.10);
+
+
+
+    border-left:
+
+
+        3px solid
+
+        var(--ov-lava-core);
+
+
+
+    color:
+
+        var(--ov-text-bright);
+
+
+}
+
+
+
+
+
+/*=====================================================
+04 PROPERTIES PANEL
+
+Metadata stone slab
+
+=====================================================
+*/
+
+
+.metadata-container {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    padding:
+
+        15px;
+
+
+
+    box-shadow:
+
+
+        0 15px 35px
+
+        rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+
+.metadata-property {
+
+
+    border-bottom:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+}
+
+
+
+
+
+.metadata-property-key {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+
+    font-weight:
+
+        700;
+
+
+}
+
+
+
+
+
+.metadata-property-value {
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+/*=====================================================
+05 GLASS SYSTEM
+
+Controlled only
+
+=====================================================
+*/
+
+
+.obsidian-glass {
+
+
+    background:
+
+        var(--ov-glass);
+
+
+
+    backdrop-filter:
+
+        blur(14px);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+}
+
+
+
+
+
+.obsidian-glass:hover {
+
+
+    background:
+
+        var(--ov-glass-hover);
+
+
+}
+
+
+
+
+
+.lava-glow {
+
+
+    box-shadow:
+
+
+        0 0 25px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+.lava-border {
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+/*=====================================================
+06 SEARCH / COMMAND POPUP
+
+Volcanic chamber
+
+=====================================================
+*/
+
+
+.modal,
+.prompt {
+
+
+    background:
+
+        var(--ov-bg-elevated);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    box-shadow:
+
+
+        0 25px 70px
+
+        rgba(0,0,0,.45);
+
+
+}
+
+
+
+
+
+.prompt-input {
+
+
+    background:
+
+        var(--ov-bg);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+/*=====================================================
+07 BUTTON SYSTEM
+
+Forged controls
+
+=====================================================
+*/
+
+
+button {
+
+
+    border-radius:
+
+        10px;
+
+
+
+    transition:
+
+        var(--ov-transition);
+
+
+}
+
+
+
+
+
+button:hover {
+
+
+    box-shadow:
+
+
+        0 0 15px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+button.mod-cta {
+
+
+    background:
+
+        var(--ov-lava-core);
+
+
+
+    color:
+
+        white;
+
+
+
+    border:
+
+        none;
+
+
+}
+
+
+
+
+
+button.mod-cta:hover {
+
+
+    background:
+
+        var(--ov-lava-copper);
+
+
+}
+/*
+=====================================================
+
+Volcanic Vein Lava THEME
+
+PART 4
+
+- Dataview
+- Tasks
+- Calendar
+- Kanban
+- Canvas
+- Excalidraw
+- Graph View
+- Embeds
+- Accessibility
+- Mobile
+
+=====================================================
+*/
+
+
+/*=====================================================
+01 DATAVIEW
+
+Obsidian archive database
+
+=====================================================
+*/
+
+
+.dataview {
+
+
+    color:
+
+        var(--ov-text);
+
+
+}
+
+
+
+
+
+.dataview.table-view-table {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+}
+
+
+
+
+
+.dataview th {
+
+
+    background:
+
+        var(--ov-bg-elevated);
+
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+.dataview td {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    color:
+
+        var(--ov-text);
+
+
+
+    border-color:
+
+        var(--ov-border);
+
+
+}
+
+
+
+
+
+.dataview tbody tr:hover {
+
+
+    background:
+
+
+        rgba(216,91,42,.06);
+
+
+}
+
+
+
+
+
+/* Dataview cards */
+
+
+.dataview .card {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    padding:
+
+        16px;
+
+
+}
+
+
+
+
+
+.dataview .card:hover {
+
+
+    border-color:
+
+        var(--ov-lava-core);
+
+
+
+    box-shadow:
+
+
+        0 0 20px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+02 TASKS
+
+Lava completion marks
+
+=====================================================
+*/
+
+
+.task-list-item-checkbox {
+
+
+    appearance:
+
+        none;
+
+
+
+    width:
+
+        18px;
+
+
+
+    height:
+
+        18px;
+
+
+
+    border:
+
+
+        2px solid
+
+        var(--ov-lava-core);
+
+
+
+    border-radius:
+
+        50%;
+
+
+}
+
+
+
+
+
+.task-list-item-checkbox:hover {
+
+
+    box-shadow:
+
+
+        0 0 12px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+.task-list-item-checkbox:checked {
+
+
+    background:
+
+        var(--ov-lava-core);
+
+
+
+    box-shadow:
+
+
+        0 0 18px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+03 CALENDAR
+
+Magma timeline
+
+=====================================================
+*/
+
+
+.calendar {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+}
+
+
+
+
+
+.calendar .today {
+
+
+    background:
+
+        var(--ov-lava-core);
+
+
+
+    color:
+
+        white;
+
+
+
+    box-shadow:
+
+
+        0 0 18px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+04 KANBAN
+
+Project stone layers
+
+=====================================================
+*/
+
+
+.kanban-plugin__lane {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+}
+
+
+
+
+
+.kanban-plugin__lane-header {
+
+
+    color:
+
+        var(--ov-lava-core);
+
+
+
+    font-weight:
+
+        700;
+
+
+}
+
+
+
+
+
+.kanban-plugin__item {
+
+
+    background:
+
+        var(--ov-bg-elevated);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        12px;
+
+
+}
+
+
+
+
+
+.kanban-plugin__item:hover {
+
+
+    border-color:
+
+        var(--ov-lava-core);
+
+
+
+    box-shadow:
+
+
+        0 0 18px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+05 CANVAS
+
+Volcanic planning chamber
+
+=====================================================
+*/
+
+
+.canvas-wrapper {
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle,
+
+            #17110d,
+
+            #050505
+
+        );
+
+
+}
+
+
+
+
+
+.canvas-node {
+
+
+    background:
+
+        rgba(15,12,10,.92);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    box-shadow:
+
+
+        0 15px 40px
+
+        rgba(0,0,0,.40);
+
+
+}
+
+
+
+
+
+.canvas-node:hover {
+
+
+    border-color:
+
+        var(--ov-lava-core);
+
+
+
+    box-shadow:
+
+
+        0 0 25px
+
+        var(--ov-lava-glow);
+
+
+}
+
+
+
+
+
+/*=====================================================
+06 EXCALIDRAW
+
+=====================================================
+*/
+
+
+.excalidraw {
+
+
+    --color-primary:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+.excalidraw .App-menu {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+}
+
+
+
+
+
+/*=====================================================
+07 GRAPH VIEW
+
+Lava knowledge network
+
+=====================================================
+*/
+
+
+.graph-view {
+
+
+    background:
+
+
+        radial-gradient(
+
+            circle,
+
+            #160e09,
+
+            #020202
+
+        );
+
+
+}
+
+
+
+
+
+.graph-view .node {
+
+
+    fill:
+
+        var(--ov-lava-core);
+
+
+
+    stroke:
+
+        var(--ov-lava-copper);
+
+
+
+}
+
+
+
+
+
+.graph-view .node.is-selected {
+
+
+    fill:
+
+        var(--ov-text-bright);
+
+
+
+    stroke:
+
+        var(--ov-lava-core);
+
+
+}
+
+
+
+
+
+.graph-view text {
+
+
+    fill:
+
+        var(--ov-text);
+
+
+
+    font-family:
+
+        var(--ov-font-body);
+
+
+}
+
+
+
+
+
+/*=====================================================
+08 EMBEDS
+
+Knowledge fragments
+
+=====================================================
+*/
+
+
+.markdown-embed,
+.internal-embed {
+
+
+    background:
+
+        var(--ov-bg-panel);
+
+
+
+    border:
+
+
+        1px solid
+
+        var(--ov-border);
+
+
+
+    border-radius:
+
+        var(--ov-radius-md);
+
+
+
+    padding:
+
+        12px;
+
+
+}
+
+
+
+
+
+/*=====================================================
+09 ACCESSIBILITY
+
+Long writing sessions
+
+=====================================================
+*/
+
+
+.markdown-preview-view {
+
+
+    text-rendering:
+
+        optimizeLegibility;
+
+
+}
+
+
+
+
+
+button:focus-visible,
+input:focus-visible {
+
+
+    outline:
+
+
+        2px solid
+
+        var(--ov-lava-core);
+
+
+
+    outline-offset:
+
+        3px;
+
+
+}
+
+
+
+
+
+/*=====================================================
+10 MOBILE
+
+Comfort mode
+
+=====================================================
+*/
+
+
+@media(max-width:700px){
+
+
+    .markdown-preview-view {
+
+
+        font-size:
+
+            16px;
+
+
+
+        padding:
+
+            0 15px;
+
+
+    }
+
+
+
+
+
+    .markdown-preview-view .markdown-preview-sizer {
+
+
+        max-width:
+
+            100%;
+
+
+    }
+
+
+
+
+
+    .callout,
+    .metadata-container {
+
+
+        border-radius:
+
+            10px;
+
+
+    }
+
+
+
+
+
+    .workspace-ribbon {
+
+
+        background:
+
+            var(--ov-bg-panel);
+
+
+    }
+
+
+
+
+
+}
