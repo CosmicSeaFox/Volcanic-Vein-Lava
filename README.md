@@ -1,183 +1,125 @@
-# Volcanic Vein Lava Lava
+# 🌋 Volcanic Vein Lava
 
 ![Obsidian Theme](https://img.shields.io/badge/Obsidian-Theme-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/badge/Version-1.0.1-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 ![Modes](https://img.shields.io/badge/Dark%20%26%20Light-Supported-e96b35)
 ![Mobile](https://img.shields.io/badge/Mobile-Supported-blue)
 
-A handcrafted Obsidian theme inspired by **volcanic stone, ancient archives, underground chambers, and glowing lava veins**.
+**An ancient knowledge archive, hidden inside a volcanic mountain.**
 
-Designed for:
+A handcrafted Obsidian theme inspired by volcanic stone, underground chambers, molten veins, and forgotten archives.
 
-- Comfortable long-form reading
-- Focused writing sessions
-- Research workflows
-- Knowledge management
-- Low-glare daily use
-- Premium volcanic atmosphere
+Designed to bring atmosphere and clarity together — for writing, research, creativity, and ideas worth preserving.
 
 ---
 
-# Preview
+## 🔥 Preview
 
-![Volcanic Vein Lava Lava](screenshot.png)
+![Volcanic Vein Lava](screenshot.png)
 
-**An ancient knowledge archive carved inside a volcanic mountain.**
+*Where ancient stone meets living fire.*
 
----
-
-# Support ☕
-
-If you enjoy this theme and want to support future development:
-
-Your support helps with:
-
-- New theme editions
-- Plugin compatibility
-- Long-term maintenance
-- Community improvements
-
-## Buy Me A Coffee
-
-<a href="https://www.buymeacoffee.com/CosmicSeaFox" target="_blank">
-<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-alt="Buy Me A Coffee"
-height="60">
-</a>
-
-
-## Ko-fi
-
-<a href="https://ko-fi.com/cosmicseafox" target="_blank">
-<img src="https://ko-fi.com/img/githubbutton_sm.svg"
-alt="Ko-fi"
-height="60">
-</a>
-
----
-
-# Screenshots
-
-## Dark Mode
+### 🌑 Dark Mode
 
 ![Dark Mode](screenshots/dark.png)
 
-Deep volcanic stone surfaces with molten lava veins and an underground forge atmosphere.
+Deep obsidian surfaces, procedural stone textures, and glowing magma accents create an atmospheric underground workspace.
 
----
-
-## Light Mode
+### ☀️ Light Mode
 
 ![Light Mode](screenshots/light.png)
 
-Polished mineral surfaces exposed to daylight with warm volcanic reflections.
+Polished mineral surfaces, warm parchment tones, and subtle copper reflections bring the volcanic aesthetic into daylight.
 
 ---
 
-## Reading Experience
+## 🌋 Forged Beneath the Surface
 
-![Reading Mode](screenshots/reading.png)
+More than a color palette. A carefully layered volcanic environment.
 
-Balanced typography, spacing, and contrast designed for comfortable long writing sessions.
-
----
-
-## Source Mode
-
-![Source Mode](screenshots/source.png)
-
-A clean writing environment with reduced visual distractions.
-
----
-
-## Tables
-
-![Tables](screenshots/table.png)
-
-Archive-style tables using unified volcanic surfaces without distracting zebra row colors.
-
----
-
-## Graph View
-
-![Graph View](screenshots/graph.png)
-
-A knowledge network inspired by underground mineral formations and volcanic connections.
-
----
-
-## Properties Panel
-
-![Properties](screenshots/properties.png)
-
-Metadata displayed as carved mineral information panels.
-
----
-
-## Code Blocks
-
-![Code Blocks](screenshots/code.png)
-
-A soft volcanic terminal style designed for comfortable coding.
-
----
-
-## Callouts
-
-![Callouts](screenshots/callouts.png)
-
-Custom knowledge chambers inspired by lava-filled volcanic structures.
-
----
-
-# Features
-
-| Feature | Description |
+| Signature Technology | Description |
 |---|---|
-| 🌑 Dark Mode | Deep volcanic stone atmosphere |
-| ☀️ Light Mode | Polished mineral daylight interface |
-| 📖 Reading Mode | Comfortable long-form reading |
-| ✍️ Source Mode | Focused writing environment |
-| 🌋 Lava System | Controlled molten accent palette |
-| 📝 Callouts | Custom volcanic knowledge chambers |
-| 📊 Tables | Unified stone archive surfaces |
-| 💻 Code Blocks | Low-glare coding panels |
-| 🗂 Properties | Mineral metadata panels |
-| 🕸 Graph View | Underground knowledge network |
-| 🏷 Tags | Lava vein labels |
-| ☑ Tasks | Custom magma checkboxes |
-| 📅 Calendar | Volcanic timeline styling |
-| 📱 Mobile | Responsive support |
+| **Procedural Magma Marble** | SVG-generated volcanic textures without external image dependencies |
+| **Molten Vein Layers** | Subtle glowing cracks woven into interface surfaces |
+| **Adaptive Heat System** | Independent texture intensity across UI areas |
+| **Readability Scrims** | Controlled overlays that balance atmosphere and clarity |
+| **Native UI Integration** | Extended Obsidian CSS variable support |
+| **Theme-Aware Lighting** | Different material treatments for dark and light modes |
+
+**Beautifully untamed. Carefully controlled.**
 
 ---
 
-# Installation
+## ✨ Features
 
-1. Download this repository.
-
-2. Copy the theme folder into:
-
-```
-YourVault/.obsidian/themes/
-```
-
-3. Open Obsidian:
-
-```
-Settings → Appearance → Themes
-```
-
-4. Select:
-
-```
-Volcanic Vein Lava Lava
-```
+| Feature | Experience |
+|---|---|
+| 🌑 Dark & Light Modes | Two distinct volcanic environments |
+| 📖 Reading & Writing | Comfortable typography and balanced contrast |
+| 🕸 Graph View | Atmospheric knowledge connections |
+| 🗂 Properties | Mineral-inspired metadata panels |
+| 💻 Code Blocks | Refined volcanic terminal styling |
+| 📝 Callouts | Custom semantic accents |
+| 📊 Tables | Polished stone-like surfaces |
+| 🏷 Tags & Tasks | Compact themed interface elements |
+| 🎨 UI Styling | Sidebars, ribbons, tabs, menus, and modals |
+| 📱 Mobile | Responsive interface support |
 
 ---
 
-# Typography
+## ⚙️ Customization
 
-| Purpose | Font |
+The volcanic atmosphere is controlled through CSS variables.
+
+Adjust individual visual intensity levels to suit your workspace:
+
+| Variable | Controls |
+|---|---|
+| `--mg-heat-base` | Main workspace |
+| `--mg-heat-editor` | Editor and writing areas |
+| `--mg-heat-side` | Sidebars |
+| `--mg-heat-graph` | Graph view |
+| `--mg-heat-ribbon` | Workspace ribbon |
+| `--mg-heat-modal` | Modals and popups |
+
+Lower heat creates a stronger dimming layer. Higher heat reveals more of the volcanic artwork.
+
+---
+
+## 🧩 Compatibility
+
+Designed for the Obsidian interface, including:
+
+- Desktop and mobile
+- Live Preview and Source Mode
+- Reading View
+- Graph View and Local Graph
+- Properties, tables, callouts, and code blocks
+
+Plugin compatibility may vary depending on individual plugin interfaces and updates.
+
+---
+
+## 🪨 Installation
+
+1. Download or clone this repository.
+2. Place the theme folder inside:
+
+   ```text
+   YourVault/.obsidian/themes/
+   ```
+
+3. Open **Settings → Appearance → Themes**.
+4. Select **Volcanic Vein Lava**.
+
+Your archive is ready to awaken.
+
+---
+
+## 🎨 Typography
+
+| Purpose | Typeface |
 |---|---|
 | Body | Inter |
 | Headings | Cormorant Garamond |
@@ -185,87 +127,28 @@ Volcanic Vein Lava Lava
 
 ---
 
-# Compatibility
+## ☕ Support the Forge
 
-| Feature | Status |
-|---|---|
-| Obsidian Desktop | ✅ |
-| Obsidian Mobile | ✅ |
-| Reading Mode | ✅ |
-| Source Mode | ✅ |
-| Live Preview | ✅ |
-| Graph View | ✅ |
-| Properties | ✅ |
-| Tables | ✅ |
-| Callouts | ✅ |
-| Code Blocks | ✅ |
-| Dataview | ✅ |
-| Tasks | ✅ |
-| Calendar | ✅ |
-| Kanban | ✅ |
-| Canvas | ✅ |
-| Excalidraw | ✅ |
+Enjoying the theme? Help keep the fire alive.
+
+Your support contributes to future editions, maintenance, compatibility improvements, and new features.
+
+**Buy Me a Coffee**
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/CosmicSeaFox)
+
+**Ko-fi**
+
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cosmicseafox)
 
 ---
 
-# Design Philosophy
+## 📜 License
 
-Volcanic Vein Lava Lava focuses on:
+Released under the **MIT License**.
 
-- Reduced eye strain
-- Calm visual hierarchy
-- Premium material design
-- Balanced contrast
-- Minimal distraction
-- Long writing comfort
-
-Created for:
-
-- Writers
-- Researchers
-- Students
-- Developers
-- Knowledge keepers
+Free to use, modify, and customize.
 
 ---
 
-# Dark Mode
-
-Features:
-
-- Black volcanic stone
-- Deep underground atmosphere
-- Molten lava highlights
-- Soft ambient glow
-- Premium archive feeling
-
----
-
-# Light Mode
-
-Features:
-
-- Polished volcanic surfaces
-- Warm mineral colors
-- Dark readable text
-- Soft crystal reflections
-- Comfortable daytime reading
-
----
-
-# Theme Concept
-
-## Ancient knowledge archive inside a volcanic mountain
-
-### Dark Mode
-
-- Black volcanic stone
-- Glowing magma veins
-- Deep underground chambers
-- Warm forge atmosphere
-
-### Light Mode
-
-- Polished mineral stone
-- Natural daylight
-```
+*Volcanic Vein Lava — an archive forged in fire, built to preserve ideas.*
